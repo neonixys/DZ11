@@ -19,7 +19,7 @@ def get_candidates_by_name(candidate_name: str):
     """Функция возвращает кандидатов по имени"""
     candidates = []
     for i in load_candidates_from_json():
-        if i['name'] == candidate_name:
+        if candidate_name.lower() in i['name'].lower():
             candidates.append(i)
     return candidates
 
@@ -28,6 +28,6 @@ def get_candidates_by_skill(skill_name: str):
     """Функция возвращает кандидатов по навыку"""
     skills = []
     for i in load_candidates_from_json():
-        if skill_name in i['skills'].lower().split(', '):
+        if skill_name.lower() in i['skills'].lower().split(', '):
             skills.append(i)
     return skills
