@@ -2,12 +2,12 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Найдено со скиллом</title>
+    <title>Skills</title>
 </head>
 <body>
-<h1>Найдено со скиллом {{ skill }}: {{ candidates|length }}</h1>
+<h1>Найдено со скиллом {{skill}}: {{candidates|length}}</h1>
 {% for candidate in candidates %}
-<p><a href="/candidate/{{ candidate.id }}">{{ candidate.name }}</a></p>
+<p><a href="/candidate/{{candidate.id }}">{{candidate.name}}</a></p>
 {% endfor %}
 </body>
 </html>
